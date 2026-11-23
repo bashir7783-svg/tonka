@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Programmer Md. Bashir Ahamed | Programmer & IT Mentor</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+:root{--bg:#070a16;--card:rgba(255,255,255,.055);--text:#f5f7ff;--muted:#aab1c8;--cyan:#00e5ff;--pink:#ff4ecd;--purple:#9b5cff;--gold:#ffd24d}
+body{font-family:'Outfit','Hind Siliguri',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 12% 12%,#ff00a822,transparent 32%),radial-gradient(circle at 88% 18%,#00e5ff24,transparent 32%),radial-gradient(circle at 50% 95%,#8a2be224,transparent 42%)}
+.magic{position:fixed;inset:0;z-index:-1;opacity:.10;pointer-events:none;background:linear-gradient(120deg,#ff0000,#ff7f00,#ffff00,#00ff00,#00ffff,#0000ff,#7f00ff,#ff00ff,#ff1493,#ffd700,#00fa9a,#1e90ff,#ff69b4,#ff6347);background-size:600% 600%;animation:magic 20s ease infinite}
+@keyframes magic{50%{background-position:100% 50%}}
+#progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:200;background:linear-gradient(90deg,var(--cyan),var(--pink),var(--gold))}
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px 8%;background:rgba(7,10,22,.82);backdrop-filter:blur(18px);border-bottom:1px solid #ffffff14}
+.logo{font-size:22px;font-weight:800;background:linear-gradient(90deg,#00e5ff,#ff4ecd,#a855f7);-webkit-background-clip:text;background-clip:text;color:transparent}
+nav ul{display:flex;list-style:none;gap:26px}
+nav a{color:#fff;text-decoration:none;font-size:14px;transition:.3s}
+nav a:hover{color:var(--cyan)}
+.menu{display:none;font-size:24px;cursor:pointer;background:none;border:0;color:#fff}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+.hero{min-height:92vh;display:flex;align-items:center;justify-content:center;gap:70px;padding:70px 8%;flex-wrap:wrap-reverse}
+.hero-content{flex:1;min-width:290px}
+.tag{display:inline-block;padding:7px 16px;border-radius:50px;border:1px solid #00e5ff55;color:var(--cyan);font-size:13px;font-weight:600;background:#00e5ff12}
+.hero h1{font-size:clamp(38px,6vw,72px);line-height:1.08;margin:22px 0 14px}
+.gradient-text{background:linear-gradient(90deg,#00e5ff,#ff4ecd,#a855f7,#ffd700,#00e5ff);background-size:300%;animation:grad 6s linear infinite;-webkit-background-clip:text;background-clip:text;color:transparent}
+@keyframes grad{to{background-position:300%}}
+.typed{font-size:clamp(18px,2.6vw,26px);font-weight:600;min-height:36px;color:#e6eaff}
+.typed::after{content:"|";color:var(--cyan);animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.hero p{color:var(--muted);line-height:1.9;max-width:560px;font-size:17px;margin-top:14px}
+.buttons{display:flex;flex-wrap:wrap;gap:15px;margin-top:30px}
+.btn{display:inline-block;padding:13px 26px;border-radius:50px;text-decoration:none;font-weight:600;transition:.3s;cursor:pointer;font-family:inherit}
+.primary{color:#070a16;border:0;background:linear-gradient(90deg,#00e5ff,#a855f7,#ff4ecd)}
+.secondary{border:1px solid #ffffff44;color:#fff;background:transparent}
+.btn:hover{transform:translateY(-4px);box-shadow:0 0 26px #00e5ff44}
+.profile-area{width:340px;height:340px;position:relative;display:flex;align-items:center;justify-content:center}
+.profile-ring{position:absolute;inset:0;border-radius:50%;background:conic-gradient(#ff0055,#ff9900,#ffee00,#00ff99,#00ccff,#6633ff,#ff00cc,#ff0055);animation:spin 6s linear infinite;filter:drop-shadow(0 0 26px #a855f788)}
+.profile-ring::before{content:"";position:absolute;inset:6px;background:var(--bg);border-radius:50%}
+.profile-img{position:relative;width:300px;height:300px;border-radius:50%;object-fit:cover;border:5px solid #101426;box-shadow:0 0 36px #00e5ff44}
+@keyframes spin{to{transform:rotate(360deg)}}
+.badge{position:absolute;right:-6px;bottom:22px;padding:9px 15px;border-radius:14px;background:#101629;border:1px solid #ffffff22;font-size:13px;font-weight:600;box-shadow:0 8px 24px #0008}
+.badge i{color:var(--gold)}
+.stats{display:flex;justify-content:center;flex-wrap:wrap;gap:22px;padding:20px 8%}
+.stat{min-width:180px;text-align:center;padding:24px;border:1px solid #ffffff12;background:var(--card);backdrop-filter:blur(15px);border-radius:20px}
+.stat h2{font-size:34px;color:var(--cyan)}
+.stat p{color:var(--muted);margin-top:6px}
+section{padding:90px 8%}
+.section-title{text-align:center;font-size:38px;margin-bottom:12px}
+.section-desc{text-align:center;color:var(--muted);margin-bottom:44px}
+.skills{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;max-width:900px;margin:auto}
+.skill{padding:12px 22px;border:1px solid #ffffff18;border-radius:50px;background:var(--card);transition:.3s}
+.skill i{margin-right:6px;color:var(--cyan)}
+.skill:hover{transform:translateY(-5px);border-color:var(--cyan);box-shadow:0 0 18px #00e5ff33}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:24px}
+.project{border:1px solid #ffffff14;background:var(--card);border-radius:22px;padding:28px;transition:.4s;position:relative;overflow:hidden}
+.project::before{content:"";position:absolute;left:0;top:0;height:4px;width:100%;background:linear-gradient(90deg,var(--cyan),var(--purple),var(--pink))}
+.project:hover{transform:translateY(-8px);border-color:#9b5cff77;box-shadow:0 15px 40px #9b5cff22}
+.project-icon{font-size:30px;margin-bottom:16px;color:var(--cyan)}
+.project h3{margin-bottom:12px;font-size:22px}
+.project p{color:var(--muted);line-height:1.75}
+.admission{max-width:800px;margin:auto;padding:35px;background:rgba(255,255,255,.04);backdrop-filter:blur(20px);border:1px solid #ffffff18;border-radius:25px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.field{display:flex;flex-direction:column;gap:9px}
+.field.full{grid-column:1/-1}
+label{font-size:14px;color:#dce2f8}
+input,select,textarea{width:100%;padding:14px;border-radius:12px;outline:none;border:1px solid #ffffff18;background:#101629;color:#fff;font-family:inherit;font-size:15px}
+input:focus,select:focus,textarea:focus{border-color:var(--cyan);box-shadow:0 0 12px #00e5ff22}
+textarea{resize:vertical;min-height:100px}
+.submit-btn{width:100%;font-size:16px}
+.submit-btn:disabled{opacity:.7;cursor:wait}
+#success,#error{display:none;text-align:center;padding:22px;border-radius:14px}
+#success{background:#00ff9920;color:#66ffbb}
+#error{background:#ff4e6a22;color:#ff9aa9;margin-top:16px}
+#success i{font-size:36px;margin-bottom:8px}
+.contact-box{text-align:center;padding:42px;border-radius:25px;background:var(--card);border:1px solid #ffffff12}
+.contact-box p{color:var(--muted);margin:14px 0}
+.socials{display:flex;justify-content:center;gap:18px;margin-top:24px}
+.socials a{width:48px;height:48px;display:grid;place-items:center;border-radius:50%;color:#fff;background:#ffffff12;text-decoration:none;font-size:20px;transition:.3s}
+.socials a:hover{background:linear-gradient(45deg,#00e5ff,#a855f7);transform:translateY(-5px)}
+footer{padding:30px 15px;text-align:center;border-top:1px solid #ffffff12;color:var(--muted);line-height:2}
+.reveal{opacity:0;transform:translateY(26px);transition:.8s}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:800px){
+nav ul{display:none;position:absolute;top:66px;right:5%;width:220px;flex-direction:column;padding:25px;background:#101629;border-radius:15px}
+nav ul.show{display:flex}.menu{display:block}
+.hero{text-align:center;padding-top:50px;justify-content:center}
+.hero p{margin-left:auto;margin-right:auto}.buttons{justify-content:center}
+.profile-area{width:290px;height:290px}.profile-img{width:256px;height:256px}}
+@media(max-width:550px){section{padding:65px 5%}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.admission{padding:22px}.section-title{font-size:30px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<div class="magic"></div>
+
+<nav>
+  <div class="logo">BASHIR.DEV</div>
+  <ul id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#skills">Programmer Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#admission">Course Admission</a></li>
+    <li><a href="#contact">Connect</a></li>
+  </ul>
+  <button class="menu" onclick="toggleMenu()" aria-label="Menu"><i class="fas fa-bars"></i></button>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <span class="tag"><i class="fas fa-bolt"></i> Welcome to my digital world</span>
+    <h1>I'm <span class="gradient-text">Md. Bashir Ahamed</span></h1>
+    <div class="typed" id="typed"></div>
+    <p>I am an Executive Programmer, Web Developer and IT Mentor. I create modern websites, education platforms, student management systems, automated Google Sheets solutions and smart business applications. I also help learners build practical digital skills through structured computer and web development courses.</p>
+    <div class="buttons">
+      <a href="#projects" class="btn primary">Explore Projects</a>
+      <a href="#admission" class="btn secondary">Work With Me</a>
+    </div>
+  </div>
+  <div class="profile-area">
+    <div class="profile-ring"></div>
+    <img class="profile-img" alt="Executive Programmer Md. Bashir Ahamed" src="images/darjeling.jpg">
+    <div class="badge"><i class="fas fa-star"></i> Open for work</div>
+  </div>
+</section>
+
+<div class="stats reveal">
+  <div class="stat"><h2><span class="count" data-to="15">0</span>+</h2><p>Technologies</p></div>
+  <div class="stat"><h2><span class="count" data-to="20">0</span>+</h2><p>Creative Projects</p></div>
+  <div class="stat"><h2><span class="count" data-to="100">0</span>%</h2><p>Passion & Dedication</p></div>
+</div>
+
+<section id="skills">
+  <h2 class="section-title reveal">My <span class="gradient-text">Skills</span></h2>
+  <p class="section-desc reveal">Tools I use to build amazing things.</p>
+  <div class="skills reveal">
+    <div class="skill"><i class="fab fa-html5"></i>HTML5</div>
+    <div class="skill"><i class="fab fa-css3-alt"></i>CSS3</div>
+    <div class="skill"><i class="fab fa-js"></i>JavaScript</div>
+    <div class="skill"><i class="fab fa-react"></i>React</div>
+    <div class="skill"><i class="fab fa-node-js"></i>Node.js</div>
+    <div class="skill"><i class="fab fa-github"></i>GitHub</div>
+    <div class="skill"><i class="fas fa-table"></i>Google Apps Script</div>
+    <div class="skill"><i class="fas fa-palette"></i>UI/UX Design</div>
+    <div class="skill"><i class="fas fa-mobile-screen"></i>Responsive Design</div>
+    <div class="skill"><i class="fas fa-database"></i>MongoDB</div>
+    <div class="skill"><i class="fab fa-wordpress"></i>WordPress</div>
+    <div class="skill"><i class="fas fa-handshake"></i>Sales & Client Handling</div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="section-title reveal">Featured <span class="gradient-text">Projects</span></h2>
+  <p class="section-desc reveal">A showcase of my work and digital solutions.</p>
+  <div class="projects">
+    <div class="project reveal"><div class="project-icon"><i class="fas fa-graduation-cap"></i></div><h3>Modern Education System</h3><p>Student admission, marksheets, attendance, examination records and digital school management tools.</p></div>
+    <div class="project reveal"><div class="project-icon"><i class="fas fa-globe"></i></div><h3>TourVista Travel Website</h3><p>A responsive travel discovery platform with destination cards, search, category filters and modern UI design.</p></div>
+    <div class="project reveal"><div class="project-icon"><i class="fas fa-file-invoice-dollar"></i></div><h3>Smart Business & Utility Dashboard</h3><p>Manage collections, expenses, balances and reports with searchable records and Google Sheets integration.</p></div>
+  </div>
+</section>
+
+<section id="admission">
+  <h2 class="section-title reveal">Start Your <span class="gradient-text">Learning Journey</span></h2>
+  <p class="section-desc reveal">Choose your preferred course and submit your student information to apply for admission.</p>
+  <div class="admission reveal">
+    <form id="admissionForm">
+      <div class="form-grid">
+        <div class="field"><label for="f1">Full Name *</label><input id="f1" type="text" name="name" placeholder="Enter your full name" required></div>
+        <div class="field"><label for="f2">Phone Number *</label><input id="f2" type="tel" name="phone" placeholder="01XXXXXXXXX" required pattern="[0-9+\- ]{10,15}"></div>
+        <div class="field"><label for="f3">Email Address</label><input id="f3" type="email" name="email" placeholder="Enter your email"></div>
+        <div class="field"><label for="f4">Guardian / Parent Name</label><input id="f4" type="text" name="guardian" placeholder="Enter guardian name"></div>
+        <div class="field"><label for="qualification">Educational Qualification</label><input id="qualification" type="text" name="qualification" placeholder="Your qualification"></div>
+        <div class="field"><label for="address">Address</label><input id="address" type="text" name="address" placeholder="Your present address"></div>
+        <div class="field full"><label for="f5">Select Your Course *</label>
+          <select id="f5" name="course" required>
+            <option value="">Choose one</option>
+            <option>Basic Computer & Office Applications</option>
+            <option>Computer Fundamentals</option>
+            <option>HTML & CSS Web Design</option>
+            <option>JavaScript Programming</option>
+            <option>React.js Development</option>
+            <option>Full-Stack Web Development</option>
+            <option>WordPress Website Development</option>
+            <option>UI/UX & Responsive Web Design</option>
+            <option>Google Sheets & Apps Script Automation</option>
+            <option>Freelancing & Portfolio Development</option>
+            <option>Other</option>
+          </select></div>
+        <div class="field"><label for="batch">Preferred Class Time</label><select id="batch" name="batch"><option value="">Select preferred time</option><option>Morning</option><option>Afternoon</option><option>Evening</option><option>Flexible</option></select></div>
+        <div class="field full"><label for="f6">Your Learning Goals / Message</label><textarea id="f6" name="message" placeholder="Tell me what you want to learn..."></textarea></div>
+        <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+        <div class="field full"><button class="btn primary submit-btn" type="submit"><i class="fas fa-paper-plane"></i> Submit Admission Application</button></div>
+      </div>
+    </form>
+    <div id="error"></div>
+    <div id="success"><i class="fas fa-check-circle"></i><h3>Admission Application Submitted!</h3><p>Thank you for your interest. Your information has been sent. I will contact you soon.</p></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="section-title reveal">Let's <span class="gradient-text">Connect</span></h2>
+  <p class="section-desc reveal">Ready to learn programming or build your digital future? Get in touch!</p>
+  <div class="contact-box reveal">
+    <h2>Executive Programmer Md. Bashir Ahamed</h2>
+    <p>Programmer • Web Developer • UI/UX Designer • IT Mentor</p>
+    <div class="socials">
+      <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="mailto:bashir7783@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 <b class="gradient-text">Executive Programmer Md. Bashir Ahamed</b>. All rights reserved.</footer>
+
+<script>
+// ====== এখানে Google Apps Script-এর Web App URL বসাবেন ======
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyLsV_kikEbz7M_qh5A9W2w3X9rOcKetfPJFIDKVBIF9P_40Y1eW5JLCkvSYu6lIOS6/exec";
+// ===========================================================
+
+function toggleMenu(){document.getElementById("navLinks").classList.toggle("show")}
+document.querySelectorAll("#navLinks a").forEach(a=>a.addEventListener("click",()=>document.getElementById("navLinks").classList.remove("show")));
+
+// typing effect
+const roles=["Executive Programmer","Full-Stack Web Developer","React & JavaScript Developer","UI/UX Designer","IT Mentor"];
+let ri=0,ci=0,del=false;const t=document.getElementById("typed");
+(function type(){
+  const w=roles[ri];
+  t.textContent=w.slice(0,ci);
+  if(!del&&ci===w.length){del=true;return setTimeout(type,1400)}
+  if(del&&ci===0){del=false;ri=(ri+1)%roles.length}
+  ci+=del?-1:1;setTimeout(type,del?40:80);
+})();
+
+// scroll progress + reveal + counters
+addEventListener("scroll",()=>{const h=document.documentElement;document.getElementById("progress").style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+"%"});
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;e.target.classList.add("in");io.unobserve(e.target);
+  e.target.querySelectorAll(".count").forEach(c=>{const to=+c.dataset.to;let n=0;const s=setInterval(()=>{n+=Math.ceil(to/40);if(n>=to){n=to;clearInterval(s)}c.textContent=n},30)});
+}),{threshold:.15});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+
+// form -> Google Sheet
+document.getElementById("admissionForm").addEventListener("submit",async function(e){
+  e.preventDefault();
+  const form=this,btn=form.querySelector("button"),err=document.getElementById("error");
+  err.style.display="none";
+  if(form.website.value)return; // spam trap
+  if(SCRIPT_URL.startsWith("PASTE")){err.textContent="Google Sheet এখনো কানেক্ট করা হয়নি (SCRIPT_URL বসাতে হবে)।";err.style.display="block";return}
+  btn.disabled=true;btn.innerHTML="Submitting...";
+  try{
+    await fetch(SCRIPT_URL,{method:"POST",mode:"no-cors",body:new URLSearchParams(new FormData(form))});
+    form.style.display="none";document.getElementById("success").style.display="block";
+  }catch(x){
+    err.textContent="Submit হয়নি। ইন্টারনেট চেক করে আবার চেষ্টা করুন।";err.style.display="block";
+    btn.disabled=false;btn.innerHTML='<i class="fas fa-paper-plane"></i> Send Application';
+  }
+});
+</script>
+</body>
+</html>
